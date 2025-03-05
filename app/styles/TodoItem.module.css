@@ -5,6 +5,8 @@
     padding: 1rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.2s;
+    /*width: 100%;*/
+    word-wrap: break-word;
 }
 
 .taskCard:hover {
@@ -14,15 +16,23 @@
 .taskHeader {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.taskInfo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .taskText {
     flex: 1;
-    margin-left: 0.5rem;
     font-size: 1.125rem;
     color: #0c4a6e;
+    word-break: break-word;
 }
 
 .completed {
@@ -33,6 +43,7 @@
 .actions {
     display: flex;
     gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .editButton,
@@ -167,4 +178,18 @@
 
 .addSubtaskButton:hover {
     background-color: #3b82f6;
+}
+
+@media (max-width: 480px) {
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .editButton,
+    .deleteButton {
+        width: 100%;
+        text-align: center;
+    }
 }
