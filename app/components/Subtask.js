@@ -1,4 +1,4 @@
-import styles from '../styles/Subtask.module.css';
+import styles from '../styles/TodoItem.module.css';
 
 const Subtask = ({ subtask, updateSubtask }) => {
     return (
