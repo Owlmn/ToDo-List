@@ -1,0 +1,21 @@
+
+.subtask {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtaskCheckbox {
+    cursor: pointer;
+}
+
+.subtaskText {
+    flex: 1;
+    font-size: 0.875rem;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #6b7280;
+}
